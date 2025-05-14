@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-
 const HeroSection = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 pb-16">
+  return <section id="home" className="relative min-h-screen flex items-center pt-20 pb-16">
       <div className="absolute inset-0 bg-hero-pattern opacity-40"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background"></div>
       
@@ -54,8 +51,6 @@ const HeroSection = () => {
           <path fill="currentColor" fillOpacity="1" d="M0,288L60,266.7C120,245,240,203,360,197.3C480,192,600,224,720,229.3C840,235,960,213,1080,192C1200,171,1320,149,1380,138.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
         </svg>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
