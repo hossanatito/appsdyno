@@ -1,25 +1,23 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
-
 interface FormData {
   name: string;
   email: string;
   subject: string;
   message: string;
 }
-
 interface FormErrors {
   name?: string;
   email?: string;
   subject?: string;
   message?: string;
 }
-
 const ContactSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -28,47 +26,41 @@ const ContactSection = () => {
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const validate = () => {
     const newErrors: FormErrors = {};
     if (!formData.name) newErrors.name = 'Name is required';
-    if (!formData.email) newErrors.email = 'Email is required';
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
+    if (!formData.email) newErrors.email = 'Email is required';else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
     if (!formData.subject) newErrors.subject = 'Subject is required';
     if (!formData.message) newErrors.message = 'Message is required';
-    
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const {
+      name,
+      value
+    } = e.target;
     setFormData({
       ...formData,
       [name]: value
     });
   };
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
     if (!validate()) return;
-    
     setIsSubmitting(true);
-    
+
     // Simulate form submission - in a real app you would use EmailJS or Formspree here
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
       console.log("Form submitted:", formData);
       console.log("In a real application, this would be sent to: cynosurictechlabs@gmail.com");
       console.log("Phone number: +1 (772) 249-1629");
-      
       toast({
         title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
+        description: "We'll get back to you as soon as possible."
       });
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -81,15 +73,13 @@ const ContactSection = () => {
       toast({
         title: "Something went wrong",
         description: "Please try again later.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-
-  return (
-    <section id="contact" className="py-20">
+  return <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
@@ -126,7 +116,7 @@ const ContactSection = () => {
                       </div>
                       <div>
                         <p className="text-sm text-gray-400">Phone</p>
-                        <p className="text-gray-200">+1 (555) 123-4567</p>
+                        <p className="text-gray-200">+1 (772) 249-1629</p>
                       </div>
                     </div>
                   </div>
@@ -146,15 +136,7 @@ const ContactSection = () => {
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
                       Your Name
                     </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={`w-full bg-background/50 border ${errors.name ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500`}
-                      placeholder="John Doe"
-                    />
+                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className={`w-full bg-background/50 border ${errors.name ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500`} placeholder="John Doe" />
                     {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                   </div>
                   
@@ -162,15 +144,7 @@ const ContactSection = () => {
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
                       Your Email
                     </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={`w-full bg-background/50 border ${errors.email ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500`}
-                      placeholder="john@example.com"
-                    />
+                    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className={`w-full bg-background/50 border ${errors.email ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500`} placeholder="john@example.com" />
                     {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                   </div>
                 </div>
@@ -179,15 +153,7 @@ const ContactSection = () => {
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
                     Subject
                   </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className={`w-full bg-background/50 border ${errors.subject ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500`}
-                    placeholder="Project Inquiry"
-                  />
+                  <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} className={`w-full bg-background/50 border ${errors.subject ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500`} placeholder="Project Inquiry" />
                   {errors.subject && <p className="text-red-500 text-xs mt-1">{errors.subject}</p>}
                 </div>
                 
@@ -195,39 +161,21 @@ const ContactSection = () => {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
                     Message
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    className={`w-full bg-background/50 border ${errors.message ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500`}
-                    placeholder="Tell us about your project..."
-                  ></textarea>
+                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={5} className={`w-full bg-background/50 border ${errors.message ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500`} placeholder="Tell us about your project..."></textarea>
                   {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
                 </div>
                 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-brand-600 hover:bg-brand-700 py-6" 
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <div className="flex items-center justify-center">
+                <Button type="submit" className="w-full bg-brand-600 hover:bg-brand-700 py-6" disabled={isSubmitting}>
+                  {isSubmitting ? <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
                       Sending...
-                    </div>
-                  ) : (
-                    'Send Message'
-                  )}
+                    </div> : 'Send Message'}
                 </Button>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;

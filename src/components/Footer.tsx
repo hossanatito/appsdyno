@@ -1,13 +1,9 @@
-
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-background pt-16 border-t border-gray-800">
+  return <footer className="bg-background pt-16 border-t border-gray-800">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10">
           <div>
@@ -39,7 +35,7 @@ const Footer = () => {
               <li><a href="#about" className="text-gray-400 hover:text-brand-500 transition-colors">About Us</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-brand-500 transition-colors">Our Services</a></li>
               <li><a href="#testimonials" className="text-gray-400 hover:text-brand-500 transition-colors">Testimonials</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-brand-500 transition-colors">Careers</a></li>
+              
               <li><a href="#" className="text-gray-400 hover:text-brand-500 transition-colors">Blog</a></li>
             </ul>
           </div>
@@ -92,8 +88,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

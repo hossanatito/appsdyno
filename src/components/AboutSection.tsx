@@ -1,9 +1,6 @@
-
 import React from 'react';
-
 const AboutSection = () => {
-  return (
-    <section id="about" className="py-20 bg-secondary/50">
+  return <section id="about" className="py-20 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
@@ -22,15 +19,15 @@ const AboutSection = () => {
             
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="card bg-background/50 text-center">
-                <div className="text-brand-500 text-2xl font-bold mb-2">Innovation</div>
+                <div className="text-brand-500 text-2xl font-bold mb-2 text-white">Innovation</div>
                 <p className="text-gray-400 text-sm">Pushing boundaries with cutting-edge solutions</p>
               </div>
               <div className="card bg-background/50 text-center">
-                <div className="text-brand-500 text-2xl font-bold mb-2">Performance</div>
+                <div className="text-brand-500 text-2xl font-bold mb-2 text-white">Performance</div>
                 <p className="text-gray-400 text-sm">Creating fast, reliable, and scalable applications</p>
               </div>
               <div className="card bg-background/50 text-center">
-                <div className="text-brand-500 text-2xl font-bold mb-2">Customer-First</div>
+                <div className="text-brand-500 text-2xl font-bold mb-2 text-white">Customer-First</div>
                 <p className="text-gray-400 text-sm">Your goals and satisfaction are our top priority</p>
               </div>
             </div>
@@ -51,8 +48,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
