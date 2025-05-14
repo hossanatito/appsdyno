@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { ArrowRight, Globe, Smartphone, Palette, Cog, Wrench, Cloud } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -61,25 +60,33 @@ const ServicesSection = () => {
               key={index} 
               className="card group hover:border-brand-500 transition-all duration-300"
             >
-              <div className="mb-4 flex items-center justify-center">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-gray-400 mb-4">{service.description}</p>
-              <a 
-                href="#contact" 
-                onClick={scrollToContact}
-                className="flex items-center text-brand-500 font-medium group-hover:translate-x-1 transition-transform duration-300"
-              >
-                Talk to Us <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              <div className="flex items-start mb-4">
+                <div className="mr-3">{service.icon}</div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-gray-400 mb-4">{service.description}</p>
+                  <a 
+                    href="#contact" 
+                    onClick={scrollToContact}
+                    className="flex items-center text-brand-500 font-medium group-hover:translate-x-1 transition-transform duration-300"
+                  >
+                    Talk to Us <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </div>
+              </div>
             </div>
           ))}
         </div>
         
         <div className="mt-16 text-center">
           <div className="inline-block p-4 rounded-full bg-secondary">
-            <p className="text-gray-300">
+            <a 
+              href="#contact"
+              onClick={scrollToContact}
+              className="text-gray-300 hover:text-brand-500 transition-colors"
+            >
               Need something specific? <span className="text-brand-500 font-medium">Let's discuss your custom requirements</span>
-            </p>
+            </a>
           </div>
         </div>
       </div>
