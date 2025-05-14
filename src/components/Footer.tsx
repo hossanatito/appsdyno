@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -65,7 +66,9 @@ const Footer = () => {
               </li>
               <li className="flex items-center text-gray-400">
                 <Phone className="h-4 w-4 mr-2 text-brand-500" />
-                <span>+1 (555) 123-4567</span>
+                <a href="tel:+17722491629" className="hover:text-brand-500 transition-colors">
+                  +1 (772) 249-1629
+                </a>
               </li>
             </ul>
             <div className="mt-6">
@@ -82,8 +85,8 @@ const Footer = () => {
               © {currentYear} Appsdyno. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 text-sm hover:text-brand-500 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 text-sm hover:text-brand-500 transition-colors">Terms of Service</a>
+              <Link to="/privacy" className="text-gray-400 text-sm hover:text-brand-500 transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-400 text-sm hover:text-brand-500 transition-colors">Terms of Service</Link>
               <a href="#" className="text-gray-400 text-sm hover:text-brand-500 transition-colors">Sitemap</a>
             </div>
           </div>

@@ -25,22 +25,25 @@ const HeroSection = () => {
             </Button>
           </div>
           
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-brand-500">100+</div>
-              <div className="text-gray-400 mt-1">Projects Delivered</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-brand-500">50+</div>
-              <div className="text-gray-400 mt-1">Satisfied Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-brand-500">5+</div>
-              <div className="text-gray-400 mt-1">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-brand-500">24/7</div>
-              <div className="text-gray-400 mt-1">Support</div>
+          <div className="mt-16 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-purple-900/30 backdrop-blur-lg rounded-xl border border-white/10"></div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10 p-8 rounded-xl">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-brand-500">100+</div>
+                <div className="text-gray-300 mt-1">Projects Delivered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-brand-500">50+</div>
+                <div className="text-gray-300 mt-1">Satisfied Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-brand-500">5+</div>
+                <div className="text-gray-300 mt-1">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-brand-500">24/7</div>
+                <div className="text-gray-300 mt-1">Support</div>
+              </div>
             </div>
           </div>
         </div>
