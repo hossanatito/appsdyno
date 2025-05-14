@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu } from 'lucide-react';
+import { Menu, Axis3d } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,6 +33,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <a href="#home" className="text-xl md:text-2xl font-bold text-white flex items-center">
+            <Axis3d className="mr-2 text-brand-500 h-6 w-6 md:h-7 md:w-7" />
             <span className="text-brand-500">Apps</span>dyno
           </a>
         </div>
