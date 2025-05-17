@@ -5,11 +5,11 @@ import P5Grid from './P5Grid';
 
 const HeroSection = () => {
   return <section id="home" className="relative min-h-screen flex items-center pt-32 pb-28">
-      <div className="absolute inset-0 bg-hero-pattern opacity-40"></div>
-      <P5Grid className="opacity-70" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background"></div>
+      <div className="absolute inset-0 bg-hero-pattern opacity-20"></div>
+      <P5Grid className="opacity-90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background z-20"></div>
       
-      <div className="container relative mx-auto px-6 z-10">
+      <div className="container relative mx-auto px-6 z-30">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-10 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             Transforming Ideas into Powerful Digital Solutions

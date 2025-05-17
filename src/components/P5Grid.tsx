@@ -17,10 +17,10 @@ const P5Grid: React.FC<P5GridProps> = ({ className }) => {
     
     // Grid settings
     const gridSize = 40;
-    const dotSize = 1;
+    const dotSize = 2;
     
-    // Set the color with low opacity for subtlety
-    p5.stroke(255, 255, 255, 20);
+    // Set the color with higher opacity for better visibility
+    p5.stroke(255, 255, 255, 60); // Increased opacity from 20 to 60
     p5.strokeWeight(dotSize);
     
     // Draw horizontal lines
@@ -41,11 +41,11 @@ const P5Grid: React.FC<P5GridProps> = ({ className }) => {
       }
     }
     
-    // Add subtle dots at intersections
+    // Add more visible dots at intersections
     for (let x = 0; x < p5.width; x += gridSize) {
       for (let y = 0; y < p5.height; y += gridSize) {
-        p5.stroke(255, 255, 255, 30);
-        p5.strokeWeight(dotSize * 1.5);
+        p5.stroke(255, 255, 255, 70); // Increased opacity from 30 to 70
+        p5.strokeWeight(dotSize * 2); // Increased size from 1.5 to 2
         p5.point(x, y);
       }
     }
@@ -56,7 +56,7 @@ const P5Grid: React.FC<P5GridProps> = ({ className }) => {
   };
 
   return (
-    <div className={`absolute inset-0 z-0 ${className}`}>
+    <div className={`absolute inset-0 z-10 ${className}`}>
       <Sketch setup={setup} draw={draw} windowResized={windowResized} />
     </div>
   );
