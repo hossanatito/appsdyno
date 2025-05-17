@@ -45,8 +45,9 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-20 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/30 to-brand-950/40"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-title">Our Services</h2>
           <p className="section-subtitle">
