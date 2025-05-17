@@ -1,20 +1,23 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import P5Grid from './P5Grid';
+
 const HeroSection = () => {
-  return <section id="home" className="relative min-h-screen flex items-center pt-28 pb-24">
+  return <section id="home" className="relative min-h-screen flex items-center pt-32 pb-28">
       <div className="absolute inset-0 bg-hero-pattern opacity-40"></div>
+      <P5Grid className="opacity-70" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background"></div>
       
-      <div className="container relative mx-auto px-4 z-10">
+      <div className="container relative mx-auto px-6 z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-10 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             Transforming Ideas into Powerful Digital Solutions
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-10">
+          <p className="text-xl md:text-2xl text-gray-300 mb-12">
             We are <span className="text-brand-500 font-semibold">Appsdyno</span>, your partner in creating innovative, high-performance web and mobile experiences that drive results.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-5">
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Button size="lg" className="bg-brand-600 hover:bg-brand-700 text-lg px-8 py-6">
               Get a Free Quote
             </Button>
@@ -23,9 +26,9 @@ const HeroSection = () => {
             </Button>
           </div>
           
-          <div className="mt-20 relative">
+          <div className="mt-24 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-purple-900/30 backdrop-blur-lg rounded-xl border border-white/10"></div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10 p-10 rounded-xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10 p-12 rounded-xl">
               <div className="text-center">
                 <div className="text-3xl font-bold text-brand-500">100+</div>
                 <div className="text-gray-300 mt-1">Projects Delivered</div>
