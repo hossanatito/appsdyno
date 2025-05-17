@@ -17,35 +17,28 @@ const P5Grid: React.FC<P5GridProps> = ({ className }) => {
     
     // Grid settings
     const gridSize = 40;
-    const dotSize = 2;
+    const lineWeight = 1;
     
-    // Set the color with higher opacity for better visibility
-    p5.stroke(255, 255, 255, 60); // Increased opacity from 20 to 60
-    p5.strokeWeight(dotSize);
+    // Set the color with appropriate opacity for visibility
+    p5.stroke(255, 255, 255, 50);
+    p5.strokeWeight(lineWeight);
     
     // Draw horizontal lines
     for (let y = 0; y < p5.height; y += gridSize) {
-      for (let x = 0; x < p5.width; x += 4) {
-        // Create wave effect
-        const waveOffset = p5.sin(x * 0.01 + p5.frameCount * 0.01) * 3;
-        p5.point(x, y + waveOffset);
-      }
+      p5.line(0, y, p5.width, y);
     }
     
     // Draw vertical lines
     for (let x = 0; x < p5.width; x += gridSize) {
-      for (let y = 0; y < p5.height; y += 4) {
-        // Create wave effect
-        const waveOffset = p5.sin(y * 0.01 + p5.frameCount * 0.01) * 3;
-        p5.point(x + waveOffset, y);
-      }
+      p5.line(x, 0, x, p5.height);
     }
     
-    // Add more visible dots at intersections
+    // Add slightly larger dots at intersections
+    p5.stroke(255, 255, 255, 70);
+    p5.strokeWeight(3);
+    
     for (let x = 0; x < p5.width; x += gridSize) {
       for (let y = 0; y < p5.height; y += gridSize) {
-        p5.stroke(255, 255, 255, 70); // Increased opacity from 30 to 70
-        p5.strokeWeight(dotSize * 2); // Increased size from 1.5 to 2
         p5.point(x, y);
       }
     }
