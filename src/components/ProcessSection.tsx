@@ -76,7 +76,10 @@ const ProcessSection = () => {
                   <div className="h-full rounded-xl overflow-hidden relative bg-gradient-to-br from-brand-500/5 to-brand-700/20 p-1">
                     <div className="absolute inset-0 bg-gradient-to-br from-brand-500/10 to-brand-700/30 opacity-30"></div>
                     <div className="rounded-lg overflow-hidden relative h-full min-h-[300px] flex items-center justify-center bg-black/40">
-                      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-70"></div>
+                      {/* Faint Number Background */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-[20rem] font-bold text-brand-500 opacity-10">01</span>
+                      </div>
                       <div className="relative z-10 p-6 text-center">
                         <span className="text-xs font-semibold px-3 py-1 bg-brand-500/20 border border-brand-500/30 rounded-full text-brand-300 mb-3 inline-block">DESIGN PHASE</span>
                         <div className="font-semibold text-xl text-white">Prototype Preview</div>
@@ -123,7 +126,10 @@ const ProcessSection = () => {
                   <div className="h-full rounded-xl overflow-hidden relative bg-gradient-to-br from-purple-500/5 to-purple-700/20 p-1">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-purple-700/30 opacity-30"></div>
                     <div className="rounded-lg overflow-hidden relative h-full min-h-[300px] flex items-center justify-center bg-black/40">
-                      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-70"></div>
+                      {/* Faint Number Background */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-[20rem] font-bold text-purple-500 opacity-10">02</span>
+                      </div>
                       <div className="relative z-10 p-6 text-center">
                         <span className="text-xs font-semibold px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-300 mb-3 inline-block">DEVELOPMENT PHASE</span>
                         <div className="font-semibold text-xl text-white">Code Implementation</div>
@@ -170,7 +176,10 @@ const ProcessSection = () => {
                   <div className="h-full rounded-xl overflow-hidden relative bg-gradient-to-br from-blue-500/5 to-blue-700/20 p-1">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-700/30 opacity-30"></div>
                     <div className="rounded-lg overflow-hidden relative h-full min-h-[300px] flex items-center justify-center bg-black/40">
-                      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-70"></div>
+                      {/* Faint Number Background */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-[20rem] font-bold text-blue-500 opacity-10">03</span>
+                      </div>
                       <div className="relative z-10 p-6 text-center">
                         <span className="text-xs font-semibold px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 mb-3 inline-block">TESTING PHASE</span>
                         <div className="font-semibold text-xl text-white">Quality Assurance</div>
@@ -217,7 +226,10 @@ const ProcessSection = () => {
                   <div className="h-full rounded-xl overflow-hidden relative bg-gradient-to-br from-teal-500/5 to-teal-700/20 p-1">
                     <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-teal-700/30 opacity-30"></div>
                     <div className="rounded-lg overflow-hidden relative h-full min-h-[300px] flex items-center justify-center bg-black/40">
-                      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-70"></div>
+                      {/* Faint Number Background */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-[20rem] font-bold text-teal-500 opacity-10">04</span>
+                      </div>
                       <div className="relative z-10 p-6 text-center">
                         <span className="text-xs font-semibold px-3 py-1 bg-teal-500/20 border border-teal-500/30 rounded-full text-teal-300 mb-3 inline-block">DEPLOYMENT PHASE</span>
                         <div className="font-semibold text-xl text-white">Live Operation</div>
