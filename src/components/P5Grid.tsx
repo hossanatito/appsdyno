@@ -27,7 +27,8 @@ const P5Grid: React.FC<P5GridProps> = ({ className }) => {
     
     // Draw horizontal lines with fade effect
     for (let y = 0; y < p5.height; y += gridSize) {
-      for (let x = 0; x < p5.width; x += 2) {
+      // Draw a single continuous line for each grid row
+      for (let x = 0; x < p5.width; x++) {
         // Calculate opacity based on position
         let opacity = 50;
         
@@ -46,16 +47,15 @@ const P5Grid: React.FC<P5GridProps> = ({ className }) => {
         p5.stroke(255, 255, 255, opacity);
         p5.strokeWeight(lineWeight);
         
-        // Draw small segments instead of full lines for better fade effect
-        if (x % gridSize === 0) {
-          p5.line(x, y, x + 2, y);
-        }
+        // Draw point by point to create a continuous line with proper fading
+        p5.point(x, y);
       }
     }
     
     // Draw vertical lines with fade effect
     for (let x = 0; x < p5.width; x += gridSize) {
-      for (let y = 0; y < p5.height; y += 2) {
+      // Draw a single continuous line for each grid column
+      for (let y = 0; y < p5.height; y++) {
         // Calculate opacity based on position
         let opacity = 50;
         
@@ -74,10 +74,8 @@ const P5Grid: React.FC<P5GridProps> = ({ className }) => {
         p5.stroke(255, 255, 255, opacity);
         p5.strokeWeight(lineWeight);
         
-        // Draw small segments instead of full lines
-        if (y % gridSize === 0) {
-          p5.line(x, y, x, y + 2);
-        }
+        // Draw point by point to create a continuous line with proper fading
+        p5.point(x, y);
       }
     }
     
