@@ -131,16 +131,25 @@ const Privacy = () => {
                 <li>Right to withdraw consent.</li>
               </ul>
             </section>
-            
+          </div>
+        </div>
+      </div>
+      
+      {/* Full-width dark contact section */}
+      <div className="w-full bg-gray-900 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold mb-4">7. Contact Us</h2>
-              <p>
+              <h2 className="text-2xl font-semibold mb-4 text-white">7. Contact Us</h2>
+              <p className="text-gray-300">
                 If you have any questions about this privacy policy or our privacy practices, please contact us at:
               </p>
-              <p className="mt-4">
-                <strong>Email:</strong> cynosurictechlabs@gmail.com<br />
-                <strong>Phone:</strong> +1 (772) 249-1629
-              </p>
+              <div className="mt-6 p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
+                <p className="text-gray-200">
+                  <strong className="text-brand-500">Email:</strong> cynosurictechlabs@gmail.com<br />
+                  <strong className="text-brand-500">Phone:</strong> +1 (772) 249-1629
+                </p>
+              </div>
             </section>
           </div>
         </div>
