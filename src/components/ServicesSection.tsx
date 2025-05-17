@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ArrowRight, Globe, Smartphone, Palette, Cog, Wrench, Cloud } from 'lucide-react';
+import { Separator } from "@/components/ui/separator";
 
 const services = [
   {
@@ -45,7 +46,10 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-20 relative">
+    <section id="services" className="relative py-20">
+      {/* Top gradient fade */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-secondary/50 to-transparent z-10"></div>
+      
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/30 to-brand-950/40"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -91,6 +95,9 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
+      
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
     </section>
   );
 };
