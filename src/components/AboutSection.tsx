@@ -41,13 +41,11 @@ const AboutSection = () => {
           
           <div className="order-1 lg:order-2">
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-brand-600 to-purple-700 p-1">
-                <div className="h-full w-full rounded-xl overflow-hidden bg-secondary/90 backdrop-blur-sm">
-                  <img 
-                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
-                    alt="Software development workspace" 
-                    className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300"
-                  />
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-brand-600 to-purple-700 p-1">
+                <div className="h-full w-full rounded-xl bg-secondary/90 backdrop-blur-sm flex items-center justify-center overflow-hidden">
+                  <div className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-purple-500 p-8">
+                    <div className="transform -rotate-6">Appsdyno</div>
+                  </div>
                 </div>
               </div>
               <div className="absolute -bottom-6 -right-6 h-32 w-32 rounded-2xl bg-gradient-to-br from-brand-300 to-brand-600"></div>
