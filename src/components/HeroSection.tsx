@@ -4,6 +4,14 @@ import { Button } from "@/components/ui/button";
 import P5Grid from './P5Grid';
 
 const HeroSection = () => {
+  const handleScroll = (sectionId: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return <section id="home" className="relative min-h-screen flex items-center pt-32 pb-28">
       <div className="absolute inset-0 bg-hero-pattern opacity-20"></div>
       <P5Grid className="opacity-90" />
@@ -18,10 +26,19 @@ const HeroSection = () => {
             We are <span className="text-brand-500 font-semibold">Appsdyno</span>, your partner in creating innovative, high-performance web and mobile experiences that drive results.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Button size="lg" className="bg-brand-600 hover:bg-brand-700 text-base px-7 py-5">
+            <Button 
+              size="lg" 
+              className="bg-brand-600 hover:bg-brand-700 text-base px-7 py-5"
+              onClick={handleScroll('contact')}
+            >
               Get a Free Quote
             </Button>
-            <Button size="lg" variant="outline" className="text-base px-7 py-5">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-base px-7 py-5"
+              onClick={handleScroll('services')}
+            >
               Our Services
             </Button>
           </div>
