@@ -35,9 +35,17 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/90 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <Link to="/" className="text-xl md:text-2xl font-bold text-white flex items-center">
-            <Axis3d className="mr-2 text-brand-500 h-6 w-6 md:h-7 md:w-7" />
-            <span className="text-brand-500">Apps</span>dyno
+          <Link to="/" className="text-xl md:text-2xl font-bold text-white flex items-center group">
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-500 to-purple-600 rounded-lg blur-md opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <div className="relative bg-background rounded-lg p-1 flex items-center">
+                <Axis3d className="text-brand-500 h-6 w-6 md:h-7 md:w-7 group-hover:text-brand-400 transition-colors" />
+              </div>
+            </div>
+            <div className="ml-2 flex items-center">
+              <span className="text-brand-500 font-extrabold">Apps</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-300 to-purple-400 font-semibold">dyno</span>
+            </div>
           </Link>
         </div>
 
