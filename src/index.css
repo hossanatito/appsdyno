@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -44,6 +45,7 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    font-size: 15px; /* Slightly reduced from browser default of 16px */
   }
 
   body {
@@ -58,19 +60,19 @@
   }
   
   .section-title {
-    @apply text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl;
+    @apply text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl;
   }
 
   .section-subtitle {
-    @apply mt-4 text-lg text-muted-foreground md:text-xl;
+    @apply mt-3 text-base text-muted-foreground md:text-lg;
   }
   
   .btn-primary {
-    @apply bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 px-8 rounded-lg transition-all;
+    @apply bg-brand-600 hover:bg-brand-700 text-white font-medium py-2.5 px-7 rounded-lg transition-all;
   }
   
   .card {
-    @apply bg-secondary rounded-xl p-6 border border-gray-800;
+    @apply bg-secondary rounded-xl p-5 border border-gray-800;
   }
 }
 
