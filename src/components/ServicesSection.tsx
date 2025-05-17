@@ -1,7 +1,11 @@
 
 import React from 'react';
 import { ArrowRight, Globe, Smartphone, Palette, Cog, Wrench, Cloud } from 'lucide-react';
-import { Separator } from "@/components/ui/separator";
+import { 
+  Card, 
+  CardContent,
+  CardFooter
+} from "@/components/ui/card";
 
 const services = [
   {
@@ -61,30 +65,36 @@ const ServicesSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
+            <Card 
               key={index} 
-              className="card group hover:border-brand-500 transition-all duration-300"
+              className="group backdrop-blur-md bg-white/10 border border-white/20 shadow-lg hover:border-brand-500/50 transition-all duration-300"
             >
-              <div className="flex items-start mb-4">
-                <div className="mr-3">{service.icon}</div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-400 mb-4">{service.description}</p>
-                  <a 
-                    href="#contact" 
-                    onClick={scrollToContact}
-                    className="flex items-center text-brand-500 font-medium group-hover:translate-x-1 transition-transform duration-300"
-                  >
-                    Talk to Us <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
+              <CardContent className="p-6">
+                <div className="flex items-start">
+                  <div className="mr-4 p-2 rounded-lg bg-secondary/50 backdrop-blur-sm">
+                    {service.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+              <CardFooter className="px-6 pb-6 pt-0">
+                <a 
+                  href="#contact" 
+                  onClick={scrollToContact}
+                  className="flex items-center text-brand-500 font-medium group-hover:translate-x-1 transition-transform duration-300"
+                >
+                  Talk to Us <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </CardFooter>
+            </Card>
           ))}
         </div>
         
         <div className="mt-16 text-center">
-          <div className="inline-block p-4 rounded-full bg-secondary">
+          <div className="inline-block p-4 rounded-full bg-secondary/70 backdrop-blur-md border border-white/10">
             <a 
               href="#contact"
               onClick={scrollToContact}
