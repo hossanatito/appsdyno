@@ -47,32 +47,6 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          
-          {/* Core Values Section */}
-          <div className="mt-24">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-[#0A0E1A] p-8 rounded-xl border border-white/5 text-center">
-                <h3 className="text-2xl font-bold mb-3">Innovation</h3>
-                <p className="text-gray-400">
-                  Pushing boundaries with cutting-edge solutions
-                </p>
-              </div>
-              
-              <div className="bg-[#0A0E1A] p-8 rounded-xl border border-white/5 text-center">
-                <h3 className="text-2xl font-bold mb-3">Performance</h3>
-                <p className="text-gray-400">
-                  Creating fast, reliable, and scalable applications
-                </p>
-              </div>
-              
-              <div className="bg-[#0A0E1A] p-8 rounded-xl border border-white/5 text-center">
-                <h3 className="text-2xl font-bold mb-3">Customer-First</h3>
-                <p className="text-gray-400">
-                  Your goals and satisfaction are our top priority
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>;
