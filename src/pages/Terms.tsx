@@ -15,10 +15,32 @@ const Terms = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       
-      <div className="container mx-auto px-4 py-20">
+      {/* Hero Section */}
+      <div className="relative bg-secondary/30">
+        <div className="absolute inset-0 opacity-20 bg-gradient-to-r from-blue-900 to-purple-900"></div>
+        <div className="container mx-auto px-4 py-16 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            <div className="w-full lg:w-1/2 flex justify-center lg:order-2">
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800" 
+                alt="Terms of Service" 
+                className="rounded-lg shadow-lg max-w-md w-full object-cover h-64"
+              />
+            </div>
+            <div className="w-full lg:w-1/2 lg:order-1">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">Terms of Service</h1>
+              <p className="text-lg text-gray-300">
+                These terms establish the rules and regulations for using our services. Please read them carefully.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-5"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold mb-8">Terms of Service</h1>
-          
           <div className="prose prose-invert max-w-none">
             <p className="mb-6">Last updated: May 14, 2025</p>
             
