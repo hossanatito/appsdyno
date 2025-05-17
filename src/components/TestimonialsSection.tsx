@@ -24,8 +24,11 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 bg-secondary/50">
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="py-20 bg-secondary/50 relative">
+      {/* Top gradient fade */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-secondary/50 to-transparent z-10"></div>
+      
+      <div className="container mx-auto px-4 relative z-20">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-title">Client Testimonials</h2>
           <p className="section-subtitle">
@@ -61,6 +64,9 @@ const TestimonialsSection = () => {
           ))}
         </div>
       </div>
+      
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
     </section>
   );
 };

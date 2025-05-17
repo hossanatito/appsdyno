@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+
 interface FormData {
   name: string;
   email: string;
@@ -79,8 +80,12 @@ const ContactSection = () => {
       setIsSubmitting(false);
     }
   };
-  return <section id="contact" className="py-20">
-      <div className="container mx-auto px-4">
+  return (
+    <section id="contact" className="py-20 relative">
+      {/* Top gradient fade */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-secondary/50 to-transparent z-10"></div>
+      
+      <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="section-title">Get In Touch</h2>
@@ -176,6 +181,10 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+      
+      {/* No bottom gradient fade needed for the last section */}
+    </section>
+  );
 };
+
 export default ContactSection;

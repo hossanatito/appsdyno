@@ -1,7 +1,13 @@
+
 import React from 'react';
+
 const AboutSection = () => {
-  return <section id="about" className="py-20 bg-secondary/50">
-      <div className="container mx-auto px-4">
+  return (
+    <section id="about" className="py-20 bg-secondary/50 relative">
+      {/* Top gradient fade */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent z-10"></div>
+      
+      <div className="container mx-auto px-4 relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h2 className="section-title">About Appsdyno</h2>
@@ -48,6 +54,11 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+      
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-secondary/50 to-transparent z-10"></div>
+    </section>
+  );
 };
+
 export default AboutSection;
