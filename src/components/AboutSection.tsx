@@ -69,20 +69,20 @@ const AboutSection = () => {
                 <div className="h-full w-full rounded-xl bg-secondary/90 backdrop-blur-sm flex items-center justify-center overflow-hidden relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-brand-600/10 to-purple-700/10 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
-                  <div className="relative z-10 p-8 text-center">
-                    <div className="text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-400 via-purple-400 to-brand-300 mb-4">
-                      <div className="transform -rotate-6">Appsdyno</div>
+                  <div className="relative z-10 p-6 sm:p-8 text-center">
+                    <div className="text-5xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-400 via-purple-400 to-brand-300 mb-4">
+                      <div className="transform -rotate-3">Appsdyno</div>
                     </div>
                     <div className="text-sm text-gray-300 max-w-xs mx-auto">
                       <span className="text-brand-300">Transforming</span> ideas into 
                       <span className="text-purple-400"> exceptional</span> digital experiences
                     </div>
                     
-                    <div className="mt-6 grid grid-cols-2 gap-3">
-                      <div className="px-3 py-2 rounded-lg bg-brand-500/10 text-xs text-brand-300 font-medium">Web Development</div>
-                      <div className="px-3 py-2 rounded-lg bg-purple-500/10 text-xs text-purple-300 font-medium">Mobile Apps</div>
-                      <div className="px-3 py-2 rounded-lg bg-blue-500/10 text-xs text-blue-300 font-medium">UI/UX Design</div>
-                      <div className="px-3 py-2 rounded-lg bg-teal-500/10 text-xs text-teal-300 font-medium">Cloud Solutions</div>
+                    <div className="mt-6 grid grid-cols-2 gap-2 sm:gap-3">
+                      <div className="px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-brand-500/10 text-xs text-brand-300 font-medium">Web Development</div>
+                      <div className="px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-purple-500/10 text-xs text-purple-300 font-medium">Mobile Apps</div>
+                      <div className="px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-blue-500/10 text-xs text-blue-300 font-medium">UI/UX Design</div>
+                      <div className="px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-teal-500/10 text-xs text-teal-300 font-medium">Cloud Solutions</div>
                     </div>
                   </div>
                 </div>
